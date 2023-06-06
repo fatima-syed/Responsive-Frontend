@@ -1,0 +1,510 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .menu,.search, #vid-section {
+        display: none;
+    }
+    .content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #welcome-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #weather-section ul, #weather-heading #wtr-btn,#isb-wthr {
+        display: none;
+    }
+    .column1,.column2,.column3 {
+        flex: 100%;
+    }
+    #ed-picks {
+        display: none;
+    }
+}
+
+
+/* Tablet Layout */
+@media (max-width: 800px) {
+    .menu,.search, #vid-section {
+        display: none;
+    }
+    .content {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    #welcome-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .column1,.column2,.column3 {
+        flex: 100%;
+    }
+    #ed-picks {
+        display: none;
+    }
+}
+
+
+/* Desktop Layout */
+@media (min-width: 800px) {
+    .column1 {
+      flex: 25%;
+      max-width: 25%;
+    }
+}
+
+#first-column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 0.5vw;
+}
+
+.column1 {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 0.5vw;
+}
+
+.column2 {
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 0vw 0.5vw;
+}
+
+.column3 {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0vw 0.5vw;
+}
+
+body {
+    background-image: url('bbc1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0vw;
+    width: 100%;
+    padding: 0vw;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+body img {
+    max-width: 100%;
+}
+
+.section {
+    margin-top: 6vw;
+    padding: 4vw 6vw;
+}
+
+.section-heading {
+    border-left: 0.3vw solid gold;
+    font-size: 1.4vw;
+    padding-left: 0.3vw;
+    margin-bottom: 1vw;
+    margin-left: 0.5vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    gap: 0.4vw;
+}
+
+.content div {
+    width: 30vw;
+}
+
+.content img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    margin-bottom: 1vw;
+}
+
+/* NAVBAR SECTION */
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#navbar button:hover {
+    cursor: pointer;
+}
+
+#icon {
+    padding: 0.3vw 0.7vw 0.7vw 0vw;
+    float: left;
+    max-width: 100%;
+}
+
+.menu {
+    padding: 0.5vw;
+    margin-left: -1vw;
+}
+
+.menu a {
+    padding: 1.2vw;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.126vw;
+    position: relative;
+    transition: color 0.5s ease;
+    margin-top:0.6vw;
+}
+
+/* .menu a:hover {
+    color: darkred;
+} */
+
+.search {
+    padding-top: 1.8vw;
+}
+
+#searchInput {
+    width:13vw;
+    height:2.2vw;
+    border-radius:1.3vw;
+    border: none;
+    padding: 0.1vw;
+}
+
+#searchSubmit {
+    background-color: black;
+    color: #f2f2f2;
+    float: right;
+    padding: 0.4vw 0vw 0.2vw 0.7vw;
+    font-size: 1.2vw;
+    border: none;
+    cursor: pointer;
+    transition: 700ms color;
+}
+
+#searchSubmit:hover {
+    color: darkblue;
+}
+
+.hover-underline-animation-blue {
+    display: inline-block;
+    position: relative;
+    color: dodgerblue;
+}
+
+.hover-underline-animation-blue:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.1302vw;
+    bottom: 0;
+    left: 0;
+    background-color: dodgerblue;
+    transform-origin: bottom right;
+    transition: transform 1s ease-out;
+}
+
+.hover-underline-animation-white {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.hover-underline-animation-white:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.1302vw;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 1s ease-out;
+}
+
+.hover-underline-animation-blue:hover:after, .hover-underline-animation-white:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* WELCOME SECTION */
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 8vw 6vw 6vw 6vw;
+}
+
+#welcome-heading {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1.5vw;
+    letter-spacing: 0.05vw;
+    padding: 1vw;
+}
+
+#welcome-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#welcome-content img {
+    padding: 0vw 0.4vw;
+    max-width: 100%;
+}
+
+/* WEATHER SECTION */
+#weather-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 2vw 2vw 0.2vw 2vw;
+    background-color: rgba(30, 144, 255, 0.5);
+    color: black;
+}
+
+#weather-section ul {
+    list-style: none;
+}
+
+#weather-section ul li {
+    display: inline;
+}
+
+#weather-heading {
+    display: inline;
+}
+
+#wtr-btn {
+    background-color: black;
+    color: white;
+    width: 6vw;
+    height: 2.3vw;
+    border-radius: 0.4vw;
+    padding: 0.6vw 1.5vw;
+    margin: -1vw 0vw 0vw 1vw;
+    cursor: pointer;
+    transition: 700ms background-color;
+}
+
+#wtr-btn:hover {
+    background-color: darkblue;
+}
+
+#isb-wthr {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5vw;
+}
+
+
+/* ON-AIR SECTION */
+#on-air-section {
+    display: flex;
+    flex-direction: row;
+}
+
+#on-air-section span {
+    padding: 1vw;
+}
+
+#on-air-section .left {
+    width: 50%;
+    background-color: cornflowerblue;
+    text-align: right;
+}
+
+#on-air-section .right {
+    width: 50%;
+    background-color: black;
+}
+
+
+/* REELS SECTION */
+#reel-section {
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url('bbc7.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 6vw;
+}
+
+#reel-btn {
+    color: white;
+    background-color: transparent;
+    box-shadow: 0 0.3906vw 0.3906vw rgba(0, 0, 0, 0.6);
+    width: 11vw;
+    height: 2.5vw;
+    border: 0.2vw solid white;
+    border-radius: 1vw;
+    margin-top: 4.3vw;
+    padding: 0.2vw 1.8vw;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: 500ms border, 500ms background-color;
+}
+
+#reel-btn:hover {
+    border: 0.2vw solid dodgerblue;
+    background-color: black;
+}
+
+
+/* ASIA NEWS SECTION */
+#asia-news-section {
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url('bbc5.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 6vw;
+}
+
+#asia-news-section .desc div {
+    width: 45vw;
+}
+
+
+/* EDITOR'S PICKS SECTION */
+#below-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.7vw;
+    padding-right: 0.4vw;
+}
+
+#below-content div p {
+    width: 20vw;
+}
+
+#below-content img {
+    margin-bottom: 1vw;
+}
+
+
+/* FUTURE SECTION */
+#future-section {
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url('bbc6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 6vw;
+}
+
+#ftr-btn {
+    color: white;
+    background-color: transparent;
+    box-shadow: 0 0.3906vw 0.3906vw rgba(0, 0, 0, 0.6);
+    width: 11vw;
+    height: 2.5vw;
+    border: 0.2vw solid white;
+    border-radius: 1vw;
+    margin-top: 4.3vw;
+    padding: 0.2vw 1.8vw;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: 500ms border, 500ms background-color;
+}
+
+#ftr-btn:hover {
+    border: 0.2vw solid dodgerblue;
+    background-color: black;
+}
+
+
+/* VIDEOS SECTION */
+.vid-links {
+    margin-left: 17.5vw;
+    padding: 1vw 0vw 1vw 1vw;
+    background-color: rgba(2, 63, 124, 0.5);
+    width: 52vw;
+}
+
+.vid-links a {
+    padding: 1vw;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    margin-top:0.6vw;
+}
+
+
+/* FOOTER SECTION */
+.footer {
+    padding: 1vw 17vw;
+    background-color: darkblue;
+    position:relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#section-links {
+    justify-content: space-evenly;
+}
+
+#section-links div {
+    border-left:0.15vw solid white;
+}
+
+.footer-link {
+    color: dodgerblue;
+    text-decoration: none;
+    font-size: 0.9vw;
+    font-weight: bold;
+    padding-left: 1vw;
+    transition: 500ms color;
+}
+
+.footer-link:hover {
+    color: lightblue;
+}
+
+#misc-links {
+    justify-content: space-evenly;
+    margin: 1.5vw 0vw;
+    font-size: 1.5vw;
+}
+
+.misc {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    transition: 500ms color;
+}
+
+.misc:hover {
+    color: cornflowerblue;
+}
+
+#footer-end {
+    font-size: 0.95vw;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: black;
+}
